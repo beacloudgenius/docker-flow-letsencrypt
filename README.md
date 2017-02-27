@@ -62,10 +62,10 @@ docker service create --name letsencrypt-companion \
     --label com.df.distribute=true \
     --label com.df.servicePath=/.well-known/acme-challenge \
     --label com.df.port=80 \
-    -e DOMAIN_1="('haembi.de' 'www.haembi.de' 'blog.haembi.de')"\
-    -e DOMAIN_2="('michael-hamburger.de' 'www.michael-hamburger.de' 'blog.michael-hamburger.de')"\
+    -e DOMAIN_1="('littlefancyworld.com' 'www.littlefancyworld.com')"\
+    -e DOMAIN_2="('be.a.cloudgeni.us' 'cloudgeni.us' 'www.be.a.cloudgeni.us' 'www.cloudgeni.us')"\
     -e DOMAIN_COUNT=2 \
-    -e CERTBOT_EMAIL="your.mail@mail.de" \
+    -e CERTBOT_EMAIL="nilesh@cloudgeni.us" \
     -e PROXY_ADDRESS="proxy" \
     -e CERTBOT_CRON_RENEW="('0 3 * * *' '0 15 * * *')"\
     --network proxy \
