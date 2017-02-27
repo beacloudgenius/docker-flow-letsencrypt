@@ -70,7 +70,7 @@ docker service create --name letsencrypt-companion \
     -e CERTBOT_CRON_RENEW="('0 3 * * *' '0 15 * * *')"\
     --network proxy \
     --mount type=bind,source=/etc/letsencrypt,destination=/etc/letsencrypt \
-    --constraint 'node.id==<nodeId>' \
+    --constraint=node.role==manager \
     --replicas 1 hamburml/docker-flow-letsencrypt:latest
 ```
 
