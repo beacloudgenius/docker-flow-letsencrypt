@@ -34,10 +34,15 @@ Certbot-auto is called with  ```--rsa-key-size 4096 --redirect --hsts --staple-o
 ```
 docker build -t hamburml/docker-flow-letsencrypt .
 ```
+### Attention! Create /etc/letsencrypt folder before you start the service.
+
+Assuming you are planning to run this service on `node-1`.
+```
+docker-machine ssh node-1 "sudo mkdir -p /etc/letsencrypt"
+```
 
 ### [Run](https://github.com/hamburml/docker-flow-letsencrypt/blob/master/run)
 
-Attention! Create /etc/letsencrypt folder before you start the service.
 ```
 docker service create --name letsencrypt-companion \
     --label com.df.notify=true \
